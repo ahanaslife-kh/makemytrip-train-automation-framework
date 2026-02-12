@@ -1,0 +1,25 @@
+collecting ... 2026-02-12 18:44:43,263 - INFO - Opening MakeMyTrip
+2026-02-12 18:44:43,264 - INFO - Searching trains from Delhi to Mumbai
+collected 1 item
+
+tests\test_trains_search.py 2026-02-12 18:44:59,492 - INFO - Results Loaded: 17 trains found
+2026-02-12 18:44:59,512 - INFO - First 5 Train Names:
+2026-02-12 18:44:59,601 - INFO - Mmct Tejas Raj
+2026-02-12 18:44:59,777 - INFO - Nzm Mao Rajdani
+2026-02-12 18:44:59,867 - INFO - Nzm Mao Rajdani
+2026-02-12 18:44:59,936 - INFO - Bdts Garibrath
+2026-02-12 18:44:59,951 - INFO - Ak Tejas Raj Ex
+2026-02-12 18:44:59,967 - INFO -
+Validating Train Names...
+2026-02-12 18:45:00,013 - INFO - Mmct Tejas Raj
+2026-02-12 18:45:00,030 - INFO - Nzm Mao Rajdani
+2026-02-12 18:45:00,054 - INFO - Nzm Mao Rajdani
+2026-02-12 18:45:00,069 - INFO - Bdts Garibrath
+2026-02-12 18:45:00,094 - INFO - Ak Tejas Raj Ex
+2026-02-12 18:45:00,130 - INFO -
+Train Details:
+2026-02-12 18:45:00,176 - INFO - Train: Mmct Tejas Raj | Duration: 15h 40m
+2026-02-12 18:45:00,198 - INFO - Train: Nzm Mao Rajdani | Duration: 16h 41m
+View Route | Price: ₹ 3165
+2026-02-12 18:45:00,257 - INFO - First train selected successfully.
+2026-02-12 18:45:00,362 - INFO - Screenshot captured successfully.

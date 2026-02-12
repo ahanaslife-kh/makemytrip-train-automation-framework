@@ -1,0 +1,22 @@
+[32mINFO    [0m pages.trains_results:trains_results.py:28 Results Loaded: 17 trains found
+[32mINFO    [0m pages.trains_results:trains_results.py:33 First 5 Train Names:
+[32mINFO    [0m pages.trains_results:trains_results.py:35 Mmct Tejas Raj
+[32mINFO    [0m pages.trains_results:trains_results.py:35 Nzm Mao Rajdani
+[32mINFO    [0m pages.trains_results:trains_results.py:35 Nzm Mao Rajdani
+[32mINFO    [0m pages.trains_results:trains_results.py:35 Bdts Garibrath
+[32mINFO    [0m pages.trains_results:trains_results.py:35 Ak Tejas Raj Ex
+[32mINFO    [0m pages.trains_results:trains_results.py:42 
+Validating Train Names...
+[32mINFO    [0m pages.trains_results:trains_results.py:46 Mmct Tejas Raj
+[32mINFO    [0m pages.trains_results:trains_results.py:46 Nzm Mao Rajdani
+[32mINFO    [0m pages.trains_results:trains_results.py:46 Nzm Mao Rajdani
+[32mINFO    [0m pages.trains_results:trains_results.py:46 Bdts Garibrath
+[32mINFO    [0m pages.trains_results:trains_results.py:46 Ak Tejas Raj Ex
+[32mINFO    [0m pages.trains_results:trains_results.py:54 
+Train Details:
+[32mINFO    [0m pages.trains_results:trains_results.py:57 Train: Mmct Tejas Raj | Duration: 15h 40m
+View Route | Price: ₹ 3360
+[32mINFO    [0m pages.trains_results:trains_results.py:57 Train: Nzm Mao Rajdani | Duration: 16h 41m
+View Route | Price: ₹ 3165
+[32mINFO    [0m pages.trains_results:trains_results.py:72 First train selected successfully.
+[32mINFO    [0m pages.trains_results:trains_results.py:76 Screenshot captured successfully.

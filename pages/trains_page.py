@@ -67,7 +67,6 @@ class TrainsPage(BasePage):
             )
             close_btn.click()
 
-
             WebDriverWait(self.driver, 5).until(
                 EC.invisibility_of_element_located((By.XPATH, "//img[@alt='minimize']"))
             )

@@ -7,6 +7,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from pages.base_page import BasePage
 from selenium.webdriver.support import expected_conditions as EC
+from utils.logger import get_logger
+logger = get_logger(__name__)
 
 class TrainsPage(BasePage):
 
@@ -104,3 +106,7 @@ class TrainsPage(BasePage):
         )
 
         self.driver.execute_script("arguments[0].click();", search_btn)
+
+    def capture_search_screenshot(self):
+            self.driver.save_screenshot("train_search1.png")
+            logger.info("Screenshot captured successfully.")

@@ -28,6 +28,7 @@ def test_train_search(driver):
     trains.select_from_city("Delhi")
     trains.enter_to_city("Mumbai")
     trains.click_search()
+    trains.capture_search_screenshot()
 
     result_page = TrainResultPage(driver)
     result_page.validate_results_loaded()

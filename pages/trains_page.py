@@ -71,14 +71,8 @@ class TrainsPage(BasePage):
             WebDriverWait(self.driver, 5).until(
                 EC.invisibility_of_element_located((By.XPATH, "//img[@alt='minimize']"))
             )
-
-        except:
+        except TimeoutException:
             pass
-        search_button = self.driver.find_element(By.XPATH, "//a[@data-cy='submit']")
-        self.driver.execute_script("arguments[0].click();", search_button)
-
-
-
     def click_search(self):
         self.driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ESCAPE)
         WebDriverWait(self.driver, 10).until(

@@ -18,7 +18,6 @@ class TrainResultPage(BasePage):
         By.XPATH,
         "//div[@data-testid='travel-time']"
     )
-
     def __init__(self, driver):
         super().__init__(driver)
 

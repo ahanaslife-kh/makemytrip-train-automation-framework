@@ -18,7 +18,8 @@ class TrainsPage(BasePage):
     TO_INPUT = (By.ID, "toCity")
 
     ACTIVE_INPUT = (By.XPATH, "//input[@placeholder='From' or @placeholder='To']")
-
+    DATE_PICK=(By.CSS_SELECTOR, "div[aria-label='Mon Feb 16 2026']")
+    CLASS_PICK=(By.CSS_SELECTOR,"li[data-cy='SL']")
     SEARCH_BUTTON = (By.XPATH, "//a[@data-cy='submit']")
 
     def open_trains_tab(self):
@@ -45,7 +46,7 @@ class TrainsPage(BasePage):
         ))
 
         to_input.clear()
-        to_input.send_keys("Mumbai")
+        to_input.send_keys(city)
 
         mumbai_option = self.wait.until(EC.element_to_be_clickable(
             (By.XPATH, "//li[@role='option']//span[contains(text(),'Mumbai')]")
@@ -53,7 +54,12 @@ class TrainsPage(BasePage):
 
         self.driver.execute_script("arguments[0].click();", mumbai_option)
 
+    def date_pick(self):
+        self.click(self.DATE_PICK)
 
+    def class_pick(self):
+        class_picking=self.wait.until(EC.element_to_be_clickable(self.CLASS_PICK))
+        self.driver.execute_script("arguments[0].click();", class_picking)
 
     def close_popup_if_present(self):
         try:
@@ -71,26 +77,8 @@ class TrainsPage(BasePage):
             pass
         search_button = self.driver.find_element(By.XPATH, "//a[@data-cy='submit']")
         self.driver.execute_script("arguments[0].click();", search_button)
-    def date_picker(self):
-        departure = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//input[@data-cy='departure']"))
-        )
-        departure.click()
-        select_date = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//div[@class='DayPicker-Day' and text()='12']"))
-        )
-        select_date.click()
-        WebDriverWait(self.driver, 10).until(
-            EC.invisibility_of_element_located((By.XPATH, "//div[contains(@class,'dayPicker')]"))
-        )
 
-    def class_Select(self):
-            self.wait.until(
-                EC.element_to_be_clickable((By.ID, "travelClass"))
-            ).click()
-            self.wait.until(
-                EC.element_to_be_clickable((By.XPATH, "//li[@data-cy='SL']"))
-            ).click()
+
 
     def click_search(self):
         # Close calendar if open

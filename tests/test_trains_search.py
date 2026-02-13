@@ -27,6 +27,8 @@ def test_train_search(driver):
     trains.open_trains_tab()
     trains.select_from_city("Delhi")
     trains.enter_to_city("Mumbai")
+    trains.date_pick()
+    trains.class_pick()
     trains.click_search()
     trains.capture_search_screenshot()
 

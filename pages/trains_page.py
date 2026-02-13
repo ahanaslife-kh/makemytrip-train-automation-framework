@@ -80,7 +80,6 @@ class TrainsPage(BasePage):
 
 
     def click_search(self):
-        # Close calendar if open
         self.driver.find_element(By.TAG_NAME, "body").send_keys(Keys.ESCAPE)
         WebDriverWait(self.driver, 10).until(
             EC.invisibility_of_element_located(

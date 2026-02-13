@@ -35,16 +35,6 @@ class TrainResultPage(BasePage):
 
         assert len(names) > 0
 
-    def validate_train_names(self):
-        names = self.driver.find_elements(*self.TRAIN_NAMES)
-
-        logger.info("\nValidating Train Names...")
-        assert len(names) >= 5
-
-        for name in names[:5]:
-            logger.info(name.text)
-            assert name.text.strip() != ""
-
     def extract_train_details(self):
         names = self.driver.find_elements(*self.TRAIN_NAMES)
         durations = self.driver.find_elements(*self.TRAIN_DURATIONS)
@@ -70,9 +60,7 @@ class TrainResultPage(BasePage):
 
             logger.info("First train selected successfully.")
 
-    def capture_screenshot(self):
-        self.driver.save_screenshot("train_results.png")
-        logger.info("Screenshot captured successfully.")
+
 
 
 

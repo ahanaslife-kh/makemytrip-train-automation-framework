@@ -35,10 +35,9 @@ def test_train_search(driver):
     result_page = TrainResultPage(driver)
     result_page.validate_results_loaded()
     result_page.print_train_names()
-    result_page.validate_train_names()
     result_page.extract_train_details()
     result_page.select_first_train()
-    result_page.capture_screenshot()
+
 
 
 

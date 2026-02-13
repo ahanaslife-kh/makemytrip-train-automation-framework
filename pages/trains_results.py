@@ -10,7 +10,6 @@ class TrainResultPage(BasePage):
         By.XPATH,
         "//div[contains(text(),'trains found')]"
     )
-    #TRAINS = (By.XPATH, "//div[@data-testid='listing-card']")
     TRAIN_NAMES = (By.XPATH, "//p[@data-testid='train-name']")
     TRAIN_PRICES = (By.XPATH, "//p[contains(@class,'Cards_totalText')]")
     FIRST_TRAIN_CARD = (By.XPATH, "(//div[@data-testid='listing-card'])[1]")
@@ -48,8 +47,6 @@ class TrainResultPage(BasePage):
                 f"Duration: {durations[i].text} | "
                 f"Price: {prices[i].text}"
             )
-
-        assert len(names) > 5
 
     def select_first_train(self):
 

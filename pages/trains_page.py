@@ -40,7 +40,6 @@ class TrainsPage(BasePage):
             (By.CSS_SELECTOR, "input[placeholder='To']")
         )).click()
 
-
         to_input = self.wait.until(EC.visibility_of_element_located(
             (By.CSS_SELECTOR, "input[placeholder='To']")
         ))
